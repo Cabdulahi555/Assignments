@@ -2,7 +2,7 @@
 
 This repository contains my personal classwork assignments and projects for educational purposes.
 
-## ⚠️ Academic Integrity Notice
+##  Academic Integrity Notice
 
 This repository is intended solely for:
 - Personal storage and organization of my coursework
