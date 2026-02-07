@@ -2,6 +2,9 @@
 
 ## This is my week-1 assignment-1 for CISC187 with prof Danish Khan
 
+## Youtube Link
+https://youtu.be/8nC7XIkkyjY
+
 ### Question 1
 Explain how to create an array of 100 elements. You can choose any data type of your choice. (requires C++ code) - 1 pts
   -  We can initialize an array, with a name of our chooseing, to hold 100 elements. Ex. below
