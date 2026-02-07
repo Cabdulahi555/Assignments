@@ -47,6 +47,8 @@ int main()
 ```
 This will fill up our array, and output all elemts, 100 total.
 
+Size for each element of the array will depend on which data type we decide to use. In my instance, the int will hold 4 bytes every element.
+
 ### Question 3
 For an array containing 100 elements, provide the number of steps the following operations would take: (theoretical) - 6 pts
 
