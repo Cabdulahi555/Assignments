@@ -21,15 +21,16 @@
     - LINEAR SEARCHING--------------
     - In linear searching, the amount required to find the keys in both the best and worst element were as 
         explained in the textbook. When an element was placed at the end, it turned out we needed N steps in truth, 
-        when it was placed in the beginning, we needed 1 step, and for the middle, it was exactly the N steps of where the index resided. The time complexity for Linear Searching is O(N).
+        when it was placed in the beginning, we needed 1 step, and for the middle, it was exactly the N steps of where the index resided. The time complexity for Linear Searching is O(N). 
+    - BINARY SEARCHING--------------
+    - For binary search, the only case which it was beaten was when the element was in the beginning. However,
+        every other case such as middle or last, it took 1 and 17 steps respectively. According to our textbook, 
+        "Searching Algorithms" chapter 4, Binary searching took advantage of the sorted data by splitting the array in half
+        if the key wasn't in the middle, reducing time complexity from O(N) to O(log N). We see that here with each iteration.
+        After the first step, N/2 remain.
+         After the second, N/4 remain and so on.
 
-BINARY SEARCHING--------------
- -For binary search, the only case which it was beaten was when the element was in the beginning. However,
-    every other case such as middle or last, it took 1 and 17 steps respectively. According to our textbook, 
-    "Searching Algorithms" chapter 4, Binary searching took advantage of the sorted data by splitting the array in half
-    if the key wasn't in the middle, reducing time complexity from O(N) to O(log N). We see that here with each iteration.
-    After the first step, N/2 remain.
-    After the second, N/4 remain and so on.
+
 
 
 
