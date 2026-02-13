@@ -81,6 +81,13 @@ every element will be checked at least once. So its O(N)
         *see code file*
 
 ### Fourth part - Comparison with linear and binary search.
+
+
 Binary almost always has the advantage as it seems to cut away what we dont need. This is important because if we are holding large amounts of data, espeically when effiency is the priority, than anything other than binary search will let us down. The only time its beat is when we place the key in the beginning. This is due to linear search starting at index 0. Binary also always needs the data to be sorted neatly, whereas it doesnt matter for random or linear. Time complexity for Binary is 0(logN) on avg and worst case. I would use this for larger datasets that are sorted.
+
+
+
 For linear, it's practical use could be when the data is unsorted. If that is the case, it would make sense if the search when one-by-one in order. Linear also works if the data is sorted or not. Time complexity for linear is O(N) avg and worst case. I would use this when the dataset is small and unsorted.
+
+
 For random, there is no predictable pattern The data it checks could be both sorted or unsorted, but it doesn't matter since it just picks it from one place than the next with no possible predicatbility. Time complexity on this is O(N). I have no idea when I would prefer this if i'm being honest. 
