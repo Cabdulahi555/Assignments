@@ -1,3 +1,0 @@
-Mary 22
-John 24
-Bob 18
