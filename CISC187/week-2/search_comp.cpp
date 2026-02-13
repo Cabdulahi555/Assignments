@@ -1,6 +1,6 @@
 //Cabdulahi Hussein
 //Prof.Danish Khan
-//Assignment 2 - search_comparison.cpp
+//Assignment 2 - search_comp.cpp
 //Purpose: Build, implement and compare binary and linear search for large data sets.
 
 
