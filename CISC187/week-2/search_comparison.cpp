@@ -7,6 +7,8 @@
 #include <iostream>
 using namespace std;
 
+//IN this function, we will be searching for the elemnent in the given array
+//by going in one by one. We will record the steps taken.
 int lin_search( int arr[], int N, int key, int &steps)
 {
     steps = 0;
@@ -19,6 +21,9 @@ int lin_search( int arr[], int N, int key, int &steps)
 
 
 }
+//In this function, we will search for the element in the given array but splitting the array,
+// then comparing, then finally sizing down however many times we need. The staps will be 
+//recorded.
 int bin_search(int arr[], int N, int key, int &steps)
 {
     int L = 0;
@@ -115,4 +120,8 @@ Binary Search  -> found at index 0 | steps: 16
 Linear Search  -> found at index 49999 | steps: 50000
 Binary Search  -> found at index 49999 | steps: 1
 PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-1> 
+
+
+LINEAR SEARCHING--------------
+    - In linear searching, the stated steps, which was N
 */
