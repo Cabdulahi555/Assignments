@@ -70,23 +70,38 @@ int main()
         int steps = 0;
 
     //First test; search last element
-     cout <<" - Searching for 100000 -" << endl;
+     cout <<" \t- Searching for 100000 -" << endl;
      int index = rand_search(data, 100000, steps);
     cout <<"Found at the index " << index << ". Steps: " << steps << endl;
 
     //Second test; search for first element
-    cout<<"- Searching for 1 -" << endl;
+    cout<<"\t- Searching for 1 -" << endl;
     index = rand_search(data, 1, steps);
         cout << "Found at the index " << index << ". Steps: "<< steps << endl;
 
     //Third test; Searching for middle element
-    cout <<"- Searching for 50000 - " << endl;
+    cout <<"\t- Searching for 50000 - " << endl;
     index = rand_search(data, 50000, steps);
         cout <<"Found at the index " << index <<". Steps: " << steps << endl;
 
     //Fourth test: not in dataset
-    cout <<"- Searching for 999999 (999,999 not in data set) -" << endl;
+    cout <<"\t- Searching for 999999 (999,999 not in data set) -" << endl;
     index = rand_search(data, 999999, steps);
         cout <<"Not found. \n\t Steps: " << steps << endl;
 
 }
+/*
+    My output for this file was as such:-
+ PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-2> g++ .\random_search.cpp
+PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-2> ./a.exe
+        - Searching for 100000 -
+Found at the index 99999. Steps: 44815
+        - Searching for 1 -
+Found at the index 0. Steps: 82664
+        - Searching for 50000 - 
+Found at the index 49999. Steps: 16041
+        - Searching for 999999 (999,999 not in data set) -
+Not found. 
+         Steps: 100000
+PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-2> 
+*/

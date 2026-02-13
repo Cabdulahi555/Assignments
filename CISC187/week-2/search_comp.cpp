@@ -107,7 +107,7 @@ int main()
 My ran program looks as such :-
 
 
-PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-2> g++ .\search_comparison.cpp
+PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-2> g++ .\search_comp.cpp
 PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-2> ./a.exe
 
 - Searching for 100000 -
