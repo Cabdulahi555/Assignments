@@ -1,0 +1,11 @@
+For HW2:
+
+  Did you read the assignment sheet carefully?
+  
+  Never Never compile .h files.
+
+  Just list .cpp files after g++
+
+  Never ever #include .cpp files
+
+  

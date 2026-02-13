@@ -1,0 +1,41 @@
+/***************************************************************************
+Cabdulahi Hussein #19
+Prof. Slott
+Homeowkr 8 - fibonacci.cpp
+The user will be prompted to enter the number of fibonacci numbers they wish to see (N >=), and will recieve an output of their numbers.
+***************************************************************************/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int n1 = 0;
+  int n2 = 1; // hardcoded first numbers
+  int n3;
+  int amount = 0; // amount of Fibonacci numbers
+  int r;
+
+  do
+ {
+   cout <<"Enter the number of fibonacci numbers you want to see (N >= 3): ";
+  cin >> amount;
+ }
+  cout << endl<<endl;
+
+  while( amount < 3);
+  cout << n1 << " " << n2 << " ";
+  
+  for ( int i = 3; i <= amount; i ++)
+{
+   n3 = n1 + n2;
+   n1 = n2;
+   n2 = n3;
+   cout << n3 << " "; 
+
+ }
+    
+  cout << endl<<endl;
+
+  
+  return 0;
+}

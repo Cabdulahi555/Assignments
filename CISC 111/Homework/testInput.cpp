@@ -1,0 +1,50 @@
+/*****************************************************************************
+This template was written by Kazumi Slott for CS111
+10-17-2018
+
+This main tests getInt(), getDouble() and getYN() in input.h
+*****************************************************************************/
+#include <iostream>
+#include "input.h"
+using namespace std;
+
+int main()
+{
+  int age;
+  int score;
+  double gpa;
+  char input;
+  string msg;
+
+  //test get int
+  cout << "Enter an age: ";
+  age = getInt(0, 200, "An age must be between 0 and 200. Enter again: ");
+  cout << "age = " << age << endl<< endl;
+
+  cout <<"Enter a test score: ";
+  score = getInt(0, 100, "A test score must be between 0 and 100. Enter again: ");
+  cout << "score = " << score << endl<< endl;
+
+
+  //Test getDouble()
+  cout <<"Enter your gpa: ";
+  gpa = getDouble(0.00, 4.00, "A GPA must be between 0.00 and 4.00. Enter again: ");
+  cout << "gpa = " << gpa <<endl<< endl;
+    
+
+  //Test getYN()
+  //Ask if the user is a college student. It should only accept Y, y, N or n.
+  //getYN() returns Y or N only.
+   cout <<"Are you a college student? Enter Y or N: ";
+   input = getYN("Your response must be Y or N. Enter again: ");
+
+   if (input == 'y')
+     {input == 'Y';
+     }
+   else if (input == 'n')
+     {input == 'N';
+	 }
+   cout <<"ans = "<< input << endl<< endl;
+
+  return 0;
+}

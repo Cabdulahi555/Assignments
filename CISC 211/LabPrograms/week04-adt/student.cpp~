@@ -1,0 +1,54 @@
+// CS211 Lab: Implementation file student.cpp (Hidden from the client)
+
+//INSTRUCTION:
+// First, include the header file and other correct files
+// Then complete the function definitions using ** comments.
+// DO NOT DELETE MY COMMENTS!
+
+// Your Name: Cabdulahi Hussein
+//--------------------------------------
+
+#include "student.h"
+using namespace std;
+//** All member functions are listed in student.h
+//** Complete all member function definitions based on Notes-4
+
+// ** Make sure each function is preceded by comments PURPOSE: and/or PARAMETERS: 
+
+// constructor
+student::student()
+{
+  // no initialization to do
+}
+
+// destructor
+student::~student()
+{ // nothing to do since we are using static memory
+}
+
+// PURPOSE: Returns the name of the student 
+string student::getname()
+{
+  return student_name;
+}
+
+// PURPOSE: Returns the major of the student 
+string student::getmajor()
+{
+  return student_major;
+}
+
+// PURPOSE: Sets name as the stored string x
+// PARAMETER: x
+void student::setname(string name)
+{
+  student_name = name;
+}
+
+// PURPOSE: sets major as stored string x
+// PARAMETER: x
+void student::setmajor(string major)
+{
+     student_major = major;
+
+}

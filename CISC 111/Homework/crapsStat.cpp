@@ -1,0 +1,100 @@
+/*************************************************************************
+Cabdulahu Hussein
+Prof Slott
+This program will emulate a craps game.
+**************************************************************************/
+#include <iostream>
+#include <cstdlib>
+#include <iomanip>
+#include "input.h"
+using namespace std;
+
+int rollDice();
+bool playGame();
+
+int main()
+{
+  srand(time(0));
+  bool result;
+  int games;
+  int wins = 0;
+  int losses = 0;
+  double winRate;
+  double loseRate;
+
+  
+  cout <<"How many games do you want to play? ";
+  games = getInt(1, 100000000, "You need to input a number between 1 and 100000000: " );
+
+  for (int i = 0; i <= games; i++)
+    {
+      result = playGame();
+      
+      if (result == true)
+	{
+	  wins++;
+	}
+      else
+	{
+	  losses++;
+	}
+    }
+	 // time for calculations
+  winRate = (double)wins * 100 / games;
+  loseRate = (double)losses * 100 / games;
+
+       cout <<"win % " << fixed << setprecision(3) << winRate << "%" << endl;
+       cout <<"Lose % "<< fixed << setprecision(3) <<loseRate<< "%" << endl;
+       }
+
+  bool playGame()
+{
+ 
+  int rolls;
+  int first_roll;
+  bool result;
+  
+  first_roll = rollDice();
+  
+  
+    if (first_roll == 7 || first_roll == 11)
+      {     
+
+	result = true;
+
+      }      
+    else if (first_roll == 2 || first_roll == 3 || first_roll == 12)
+      {
+	result = false;
+  
+      }
+
+    else{
+      do
+	{
+	  rolls = rollDice();
+	}while (rolls != first_roll && rolls != 7);
+
+      if (rolls == 7)
+	{
+	  result = false;
+	}
+      else if (rolls == first_roll)
+
+	result = true;
+	
+	}
+    return result;
+	  
+    
+}
+
+  int rollDice()
+{
+  int roll;
+  roll = (rand() % 6 + 1) + (rand()% 6 + 1);
+
+  return roll;
+
+
+}

@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+const int SIZE = 26; // letters in alphabet
+const int MAX = 30; // 29 characters plus null terminator
+typedef char cstr[MAX]; // cstr is an alias
+
+struct letter
+
+{
+ int  freq;
+ // char longest[max]
+ cstr longest;
+ cstr shortest;
+
+
+};
+
+
+int main()
+{
+  letter ar[SIZE];
+  initializeArray(ar);
+  cout << ar[0].freq << endl;
+  cout <<"." << ar[0].longest << ":" << endl;
+  cout << "." << ar[0].shortest << ":" << endl;
+ 
+  return 0;
+
+}
+
+void initializeArray( letter ar[] )
+{
+
+  for(.....)
+    {
+      a[i].freq = 0;
+      myStrcpy( a[i].longest = "");
+      myStrcpy( a[i].shortest = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+    }
+}

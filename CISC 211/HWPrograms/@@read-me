@@ -1,0 +1,42 @@
+
+cs211 HW Programs
+  
+  All HW related questions should go to Yoshii.  Not the lab instructor.
+
+  These files must be used to write your HW programs!!
+
+  When a .out demo program is available, always run it first!!
+
+  Always read the assignment sheet carefully before you begin. 
+  Always re-read all the Style Notes from the notes
+
+  Always test your programs thoroughly before you are satisfied.
+  Always comment based on CS211 How to Comment.
+
+Note that some HW programs will be used again in later HW. So,
+do not skip doing HW assignments!
+
+COMPILE:
+g++ <list cpp files only>   
+Never never compile .h files.
+  -- if you did accidentally, email me.
+  
+TO RUN/EXECUTE:
+./a.out
+  -- note that you can rename a.out using mv as long as it has .out  
+
+TO RECORD TEST RESULTS:
+/cs/recordhw <put a brand new file name here e.g. test.txt >
+
+compile here
+run here
+
+exit
+
+You may not edit the created file.
+Download the created file. 
+Submit to Canvas.
+
+C++ Info:
+-------------
+Note that to use exit(1), you must include <stdlib.h> 

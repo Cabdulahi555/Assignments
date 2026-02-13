@@ -1,0 +1,361 @@
+Script started on 2025-10-16 17:58:09-07:00 [TERM="xterm" TTY="/dev/pts/4" COLUMNS="212" LINES="84"]
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/HWPrograms/HW4-queue[?2004h[husse013@empress HW4-queue]$ exclea./a.oug++ queue.cpp queuetest.cpp
+[?2004l]0;husse013@empress:~/cs211_ryoshii/CS211Progs/HWPrograms/HW4-queue[?2004h[husse013@empress HW4-queue]$ ./a.out
+[?2004l ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Queue has underflowed.
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+9
+bad choice
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter an element to be added.one
+The contents are: 
+front = 0 count = 1 rear = 0 
+[one ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+3
+Queue has elements. 
+The contents are: 
+front = 0 count = 1 rear = 0 
+[one ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+4
+Queue has room for elements.
+The contents are: 
+front = 0 count = 1 rear = 0 
+[one ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+5
+The contents are: 
+front = 0 count = 1 rear = 0 
+[one ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter an element to be added.two
+The contents are: 
+front = 0 count = 2 rear = 1 
+[one two ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter an element to be added.three
+The contents are: 
+front = 0 count = 3 rear = 2 
+[one two three ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter an element to be added.four
+queue  has overflowed.
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+3
+Queue has elements. 
+The contents are: 
+front = 0 count = 3 rear = 2 
+[one two three ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+4
+Stack is full.
+The contents are: 
+front = 0 count = 3 rear = 2 
+[one two three ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+one has been removed.
+The contents are: 
+front = 1 count = 2 rear = 2 
+[two three ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+3
+Queue has elements. 
+The contents are: 
+front = 1 count = 2 rear = 2 
+[two three ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+4
+Queue has room for elements.
+The contents are: 
+front = 1 count = 2 rear = 2 
+[two three ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+5
+The contents are: 
+front = 1 count = 2 rear = 2 
+[two three ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+two has been removed.
+The contents are: 
+front = 2 count = 1 rear = 2 
+[three ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+three has been removed.
+The contents are: 
+front = 0 count = 0 rear = 2 
+[EMPTY]
+[one two three ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+3
+Stack is empty
+The contents are: 
+front = 0 count = 0 rear = 2 
+[EMPTY]
+[one two three ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Queue has underflowed.
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Queue has underflowed.
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter an element to be added.one
+The contents are: 
+front = 0 count = 1 rear = 0 
+[one ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter an element to be added.two
+The contents are: 
+front = 0 count = 2 rear = 1 
+[one two ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter an element to be added.three
+The contents are: 
+front = 0 count = 3 rear = 2 
+[one two three ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+one has been removed.
+The contents are: 
+front = 1 count = 2 rear = 2 
+[two three ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter an element to be added.four
+The contents are: 
+front = 1 count = 3 rear = 0 
+[two three four ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+two has been removed.
+The contents are: 
+front = 2 count = 2 rear = 0 
+[three four ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+three has been removed.
+The contents are: 
+front = 0 count = 1 rear = 0 
+[four ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+four has been removed.
+The contents are: 
+front = 1 count = 0 rear = 0 
+[EMPTY]
+[two three four ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Queue has underflowed.
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+5
+The contents are: 
+front = 1 count = 0 rear = 0 
+[EMPTY]
+[two three four ]
+ ---------- MENU --------- 
+1 call remove
+2 call add
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+0
+You have quit. Goodbye.
+bad choice
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/HWPrograms/HW4-queue[?2004h[husse013@empress HW4-queue]$ exit
+[?2004lexit
+
+Script done on 2025-10-16 18:01:30-07:00 [COMMAND_EXIT_CODE="0"]

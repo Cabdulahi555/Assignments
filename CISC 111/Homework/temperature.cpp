@@ -1,0 +1,39 @@
+/******************************************************************************
+Cabdulahi Hussein
+CS111
+Homework 2 - temperature.cpp
+02/10/2025
+
+This program will ask for a Celsius temperature and convert it to Fahrenheit te\
+mperature and round it to the nearest integer.
+******************************************************************************/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int C; // Celcius
+  double  F; // Farenheit
+  int ConvF; // converted f
+
+  
+  // get input
+  
+  cout << "Enter a temperature in Celsius: "; // ask user input
+  cin >> C;// grab input
+
+  // now to calculate
+
+  
+  F = (9.0 / 5.0 * C + 32); // use the formula to convert to F
+  ConvF = (int)(F + 0.5); // round the F
+
+  // output the answer
+  cout << endl; // proper structure needed to auto grade
+  cout << C << " C " << " = " << ConvF << " F " << endl <<  endl;
+  //Output  in preferred structure
+
+  
+return 0;
+}

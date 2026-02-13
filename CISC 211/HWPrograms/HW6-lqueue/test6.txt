@@ -1,0 +1,31 @@
+Script started on 2025-11-10 23:31:12-08:00 [TERM="xterm" TTY="/dev/pts/5" COLUMNS="157" LINES="44"]
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/HWPrograms/HW6-lqueue[?2004h[husse013@empress HW6-lqueue]$ emacs hw6client.cpcd cs211_ryoshii/CS211Progs/HWPrograms/HW6-lqueue/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[31Pemacs hw6client.cp[1Pmore[C[C[C[C[C[C[C[C[C[C[C[C[Ccd cs211_ryoshii/CS211Progs/HWPrograms/HW6-lqueue/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[31Pemacs hw6client.cpcd cs211_ryoshii/CS211Progs/HWPrograms/HW6-lqueue/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[31Pemacs hw6client.cpcd cs211_ryoshii/CS211Progs/HWPrograms/HW6-lqueue/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[31Pemacs hw6client.cp[9@g++ lqueue.cpp[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pemacs lqueueg++ lqueue.cpp hw6client.cpp
+[?2004l]0;husse013@empress:~/cs211_ryoshii/CS211Progs/HWPrograms/HW6-lqueue[?2004h[husse013@empress HW6-lqueue]$ ./a.out
+[?2004l....Starting case 1...
+Empty.
+[ empty ]
+removed 1
+removed 2
+[3]
+Not empty.
+....Starting case 2...
+removed 3
+Empty.
+[ empty ]
+Underflow error: cannot delete from empty L2.
+....Starting case 3...
+[10][20][30]
+removed 10
+[20][30][40]
+removed 20
+removed 30
+removed 40
+[ empty ]
+Underflow test confirmed again.
+All test cases finished successfully.
+calling destructor...
+calling destructor...
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/HWPrograms/HW6-lqueue[?2004h[husse013@empress HW6-lqueue]$ exit
+[?2004lexit
+
+Script done on 2025-11-10 23:31:47-08:00 [COMMAND_EXIT_CODE="0"]

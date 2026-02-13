@@ -1,0 +1,96 @@
+// CS211 HW3 Implementation file for the stack class
+
+// INSTRUCTION: Copy purple lines from the notes to complete this file.
+// Do not do any cout except for displayAll
+
+/* ----------------------------------------------
+ Your name: Cabdulahi Hussein
+ Implementation file for the stack class
+ Compiler: g++
+ ----------------------------------------------- */
+
+// ** include appropriate files, including stack.h 
+#include <iostream>
+#include "stack.h"
+// ** define all member fuctions below making sure they match stack.h
+// ** provide appropriate comments PURPOSE & PARAMETERS above each function
+
+
+//No change to constructor but remove top
+stack::stack()
+{ } // no need to initialize the array
+
+//destructor:do not leave garbage behind - until it is empty, pop
+stack::~stack()
+{ // nothing to do when using static memory
+}
+
+// always returns false - vector doesn't fill up
+bool stack::isFull()
+{
+  return false;
+
+}
+//size() will tell you
+bool stack::isEmpty()
+{
+
+  return !el.size();
+
+}
+     
+//PURPOSE: isFull checks top and returns true if full, else false (full means top is MAX-1)
+// Parameters: No argument. Returns Boolean.
+
+
+//Push_back is used to push in vectors
+void stack::push(el_t elem)
+{
+  el.push_back(elem);
+
+ }
+
+//Use back() first and then pop_back
+void stack::pop(el_t& elem)
+{
+  if(isEmpty()){
+    throw Underflow();
+      }
+    else
+    {
+      elem = el.back();
+
+      el.pop_back();
+
+    }
+  
+}
+
+// instead of top, use size()-1
+void stack::displayAll()
+{
+  if (isEmpty())
+  {
+    cout << "[ empty ]" << endl;
+  }else
+
+    {
+      cout <<"The vector contents are: " << endl;  
+      for (int i = el.size()-1; i >=0;  i--)
+	{
+	  cout << el[i] << endl;
+
+	}
+
+    }
+}
+
+
+
+//Automatically outputs the size of the vector at a
+void stack:: Size()
+  {
+    cout<<"The size of the Vector is " << el.size() << "." << endl;
+
+
+  }

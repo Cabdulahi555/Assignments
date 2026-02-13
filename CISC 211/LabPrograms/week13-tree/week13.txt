@@ -1,0 +1,16 @@
+Script started on 2025-11-25 18:11:58-08:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="157" LINES="44"]
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/LabPrograms/week13-tree[?2004h[husse013@empress week13-tree]$ g++ bintree.cpp
+[?2004l]0;husse013@empress:~/cs211_ryoshii/CS211Progs/LabPrograms/week13-tree[?2004h[husse013@empress week13-tree]$ ./a.out
+[?2004lEnter a number: 5
+Enter a number: 1
+Added as left child of 5
+Enter a number: 3
+Added as left child of 1
+Enter a number: 7
+Added as right child of 5
+Enter a number: 9
+Added as right child of 7
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/LabPrograms/week13-tree[?2004h[husse013@empress week13-tree]$ exit
+[?2004lexit
+
+Script done on 2025-11-25 18:12:13-08:00 [COMMAND_EXIT_CODE="0"]

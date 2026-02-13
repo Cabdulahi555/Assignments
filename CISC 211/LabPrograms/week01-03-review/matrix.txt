@@ -1,0 +1,11 @@
+Script started on 2025-09-09 18:32:13-07:00 [TERM="xterm" TTY="/dev/pts/2" COLUMNS="77" LINES="43"]
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/LabPrograms/week01-03-review[?2004h[husse013@empress week01-03-review]$ g++ matrixlab.cpp 
+[?2004l]0;husse013@empress:~/cs211_ryoshii/CS211Progs/LabPrograms/week01-03-review[?2004h[husse013@empress week01-03-review]$ g++ matrixlab.cpclear[[3Pcd week01-03-review[5PLabProgramweek01-03-revielscleag++ matrixlab.cp[K./a.out
+[?2004lEnter a file name: names.txt
+Mary	John	Kathy	Steve	
+Sue	David	Lisa	Debbie	
+Julie	Sam	Tom	Kathy	
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/LabPrograms/week01-03-review[?2004h[husse013@empress week01-03-review]$ exit
+[?2004lexit
+
+Script done on 2025-09-09 18:32:33-07:00 [COMMAND_EXIT_CODE="0"]

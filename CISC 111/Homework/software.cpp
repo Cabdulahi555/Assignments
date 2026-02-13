@@ -1,0 +1,80 @@
+/*********************************************************************************************************************
+Cabdulahi Hussein
+Homework software.cpp
+this program will ask for todays date, the company name and the quantity the user wishes to buy. It will compute the cost of the purchase.
+*************************************************************************************************************************/
+
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+  //variables
+  int quantity; // amount wishing to buy
+  string date; // the date
+  string company; // name of company
+  const double PRICE = 99.0;// constant price
+  double Tot_Price; // total price
+  double Dis_Amount;// discounted amount
+  double Dis_Price; // discounted price
+  double Discount;// Discount
+  
+  //ask for inputs
+  cout << "Enter today's date (mm/dd/yy): "; //date
+  cin >> date;
+
+  cin.ignore();
+  
+  cout << "Enter your company name: "; //company name
+  getline(cin, company);
+  
+  cout << "Enter the quantity you would like to purchase: "; //quantity of product
+  cin >> quantity;
+  
+  //if else statements
+  
+  if(quantity == 0)
+    { cout << endl;
+  cout << "Hope you decide to buy our software in the future." << endl << endl;
+}
+  else if(quantity < 0)
+{      cout << endl;   
+  cout << "Invalid quantity" << endl << endl;
+}
+
+  else
+{
+    if(quantity >= 10 && quantity <= 19)//20%
+    Discount = 0.20;
+    else if(quantity >= 20 && quantity <= 49)//30%
+    Discount = 0.30;
+    else if(quantity >= 50 && quantity <= 99)//40%
+    Discount = 0.40;
+    else if (quantity >= 100)//50%
+    Discount = 0.50;
+    else
+    Discount = 0.0;
+
+    // calculations
+    Dis_Price = PRICE * quantity; //price before the discount
+  
+    Dis_Amount = Dis_Price * Discount; //amount discounted
+  
+    Tot_Price = Dis_Price - Dis_Amount;//total amount
+  
+    // Outputted results with neccesary format
+
+    cout << endl;
+    cout << "Invoice for " << setw(30) << left << company  << endl;
+    cout << setw(41) << right <<  date << endl;
+    cout << endl;
+    cout << setw(30) << left << "Price before discount" << setw(1) << "$" << setw(10) << right << fixed << setprecision(2) << Dis_Price << endl;
+    cout << setw(30) << left << "Discount" << setw(1) << "$" << setw(10) << right << fixed << setprecision(2) << Dis_Amount << endl;
+    cout << setw(30) << left << "Total Due" << setw(1) << "$" << setw(10)<< right << fixed << setprecision(2) << Tot_Price << endl;
+    cout << endl;
+}
+  
+  return 0;
+}

@@ -1,0 +1,646 @@
+Script started on 2025-12-05 22:45:18-08:00 [TERM="xterm" TTY="/dev/pts/19" COLUMNS="157" LINES="44"]
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/LabPrograms/week15-final[?2004h[husse013@empress week15-final]$ ex./a.oug++ final.cpp lqueue.cpp grocery.cpp
+[?2004l]0;husse013@empress:~/cs211_ryoshii/CS211Progs/LabPrograms/week15-final[?2004h[husse013@empress week15-final]$ ./a.out
+[?2004l
+==============================================================
+           Grocery Store Line Management System  
+This program manages 4 grocery checkout lines to sort and
+ serve customers.
+==========================================================
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: -1
+
+Invalid choice. Please enter 1-5. 
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 10
+
+Invalid choice. Please enter 1-5. 
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 1
+
+
+Choose a line 1-4: 
+
+-1
+
+
+Error. Invalid line number. Must be 1-4.
+
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 1
+
+
+Choose a line 1-4: 
+
+10
+
+
+Error. Invalid line number. Must be 1-4.
+
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 1
+
+
+Choose a line 1-4: 
+
+1
+
+Line 1: [ empty ]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 1
+
+
+Choose a line 1-4: 
+
+2
+
+Line 2: [ empty ]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 1
+
+
+Choose a line 1-4: 
+
+3
+
+Line 3: [ empty ]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 1
+
+
+Choose a line 1-4: 
+
+4
+
+Line 4: [ empty ]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 3
+
+Line 1: [ empty ]
+Line 2: [ empty ]
+Line 3: [ empty ]
+Line 4: [ empty ]
+
+Which line would you like to add to? Choose 1-4. 
+=>1
+
+What is the name of the customer? 
+
+=>Abdul
+
+==> Abdul has been added to line 2
+
+
+Line 1: [Abdul]
+Line 2: [ empty ]
+Line 3: [ empty ]
+Line 4: [ empty ]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 3
+
+Line 1: [Abdul]
+Line 2: [ empty ]
+Line 3: [ empty ]
+Line 4: [ empty ]
+
+Which line would you like to add to? Choose 1-4. 
+=>2
+
+What is the name of the customer? 
+
+=>Yoshii
+
+==> Yoshii has been added to line 3
+
+
+Line 1: [Abdul]
+Line 2: [Yoshii]
+Line 3: [ empty ]
+Line 4: [ empty ]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 3
+
+Line 1: [Abdul]
+Line 2: [Yoshii]
+Line 3: [ empty ]
+Line 4: [ empty ]
+
+Which line would you like to add to? Choose 1-4. 
+=>3
+
+What is the name of the customer? 
+
+=>Mike
+
+==> Mike has been added to line 4
+
+
+Line 1: [Abdul]
+Line 2: [Yoshii]
+Line 3: [Mike]
+Line 4: [ empty ]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 3
+
+Line 1: [Abdul]
+Line 2: [Yoshii]
+Line 3: [Mike]
+Line 4: [ empty ]
+
+Which line would you like to add to? Choose 1-4. 
+=>4
+
+What is the name of the customer? 
+
+=>George
+
+==> George has been added to line 5
+
+
+Line 1: [Abdul]
+Line 2: [Yoshii]
+Line 3: [Mike]
+Line 4: [George]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 3
+
+Line 1: [Abdul]
+Line 2: [Yoshii]
+Line 3: [Mike]
+Line 4: [George]
+
+Which line would you like to add to? Choose 1-4. 
+=>2
+
+What is the name of the customer? 
+
+=>Alex
+
+==> Alex has been added to line 3
+
+
+Line 1: [Abdul]
+Line 2: [Yoshii][Alex]
+Line 3: [Mike]
+Line 4: [George]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 1
+
+
+Choose a line 1-4: 
+
+1
+
+Line 1: [Abdul]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 1
+
+
+Choose a line 1-4: 
+
+2
+
+Line 2: [Yoshii][Alex]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 2
+
+Line 1: [Abdul]
+Line 2: [Yoshii][Alex]
+Line 3: [Mike]
+Line 4: [George]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 1
+
+
+Choose a line 1-4: 
+
+3
+
+Line 3: [Mike]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 1
+
+
+Choose a line 1-4: 
+
+3
+
+Line 3: [Mike]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 1
+
+
+Choose a line 1-4: 
+
+3
+
+Line 3: [Mike]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 1
+
+
+Choose a line 1-4: 
+
+4
+
+Line 4: [George]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 1
+
+
+Choose a line 1-4: 
+
+2
+
+Line 2: [Yoshii][Alex]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 4
+
+Line 1: [Abdul]
+Line 2: [Yoshii][Alex]
+Line 3: [Mike]
+Line 4: [George]
+
+
+Which line would you like to serve? 
+=>2
+
+=>'Yoshii' has been served from line 2
+
+Line 1: [Abdul]
+Line 2: [Alex]
+Line 3: [Mike]
+Line 4: [George]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 4
+
+Line 1: [Abdul]
+Line 2: [Alex]
+Line 3: [Mike]
+Line 4: [George]
+
+
+Which line would you like to serve? 
+=>2
+
+=>'Alex' has been served from line 2
+
+Line 1: [Abdul]
+Line 2: [ empty ]
+Line 3: [Mike]
+Line 4: [George]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 4
+
+Line 1: [Abdul]
+Line 2: [ empty ]
+Line 3: [Mike]
+Line 4: [George]
+
+
+Which line would you like to serve? 
+=>1
+
+=>'Abdul' has been served from line 1
+
+Line 1: [ empty ]
+Line 2: [ empty ]
+Line 3: [Mike]
+Line 4: [George]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 4
+
+Line 1: [ empty ]
+Line 2: [ empty ]
+Line 3: [Mike]
+Line 4: [George]
+
+
+Which line would you like to serve? 
+=>3
+
+=>'Mike' has been served from line 3
+
+Line 1: [ empty ]
+Line 2: [ empty ]
+Line 3: [ empty ]
+Line 4: [George]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 4
+
+Line 1: [ empty ]
+Line 2: [ empty ]
+Line 3: [ empty ]
+Line 4: [George]
+
+
+Which line would you like to serve? 
+=>4
+
+=>'George' has been served from line 4
+
+Line 1: [ empty ]
+Line 2: [ empty ]
+Line 3: [ empty ]
+Line 4: [ empty ]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 4
+
+Line 1: [ empty ]
+Line 2: [ empty ]
+Line 3: [ empty ]
+Line 4: [ empty ]
+
+
+Which line would you like to serve? 
+=>1
+
+Error. Cannot serve an empty line. Please try again.
+
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 4
+
+Line 1: [ empty ]
+Line 2: [ empty ]
+Line 3: [ empty ]
+Line 4: [ empty ]
+
+
+Which line would you like to serve? 
+=>2
+
+Error. Cannot serve an empty line. Please try again.
+
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 4
+
+Line 1: [ empty ]
+Line 2: [ empty ]
+Line 3: [ empty ]
+Line 4: [ empty ]
+
+
+Which line would you like to serve? 
+=>3
+
+Error. Cannot serve an empty line. Please try again.
+
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 4
+
+Line 1: [ empty ]
+Line 2: [ empty ]
+Line 3: [ empty ]
+Line 4: [ empty ]
+
+
+Which line would you like to serve? 
+=>4
+
+Error. Cannot serve an empty line. Please try again.
+
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 2
+
+Line 1: [ empty ]
+Line 2: [ empty ]
+Line 3: [ empty ]
+Line 4: [ empty ]
+
+------- MENU -------
+1- display a specific line
+2- display all lines
+3- add to a specific line
+4- serve a specific line
+5- Quit
+
+Enter your choice: 5
+
+Exiting this program. 
+
+Good Bye
+calling destructor...
+calling destructor...
+calling destructor...
+calling destructor...
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/LabPrograms/week15-final[?2004h[husse013@empress week15-final]$ exit
+[?2004lexit
+
+Script done on 2025-12-05 22:48:08-08:00 [COMMAND_EXIT_CODE="0"]

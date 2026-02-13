@@ -1,0 +1,64 @@
+// CS211 Client file to test the scores class
+
+// INSTRUCTION:
+// Write the test client after studying client1.cpp
+
+// Your Name: **
+//------------------------------------
+
+// ** include the correct files first
+#include "scores.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int answer;   // user menu choice
+  scores Scr ;  // object
+  int n;        //
+
+  do {
+    cout << " ---------- MENU --------- " << endl;
+    cout << "1. Add a score" << endl;
+    cout << "2. Sum up scores" << endl;
+    cout << "3. Get the average" << endl;
+    cout << "4. Display all scores" << endl;
+    cout << "0 to quit" << endl;
+    cout << "::";
+    
+    cin >> answer;
+
+    // ** switch cases here
+    switch(answer)
+      {
+	
+      case 1: cout <<"Enter a score: ";
+
+	cin >> n;
+
+	Scr.addScore(n);
+
+	break;
+	  
+      case 2: cout << Scr.sumScores() << " Is the sum." << endl;
+	break;
+	  
+      case 3: cout << Scr.avgScore() << " is the average." << endl;
+	break;
+	
+      case 4: Scr.displayScores();
+	break;
+
+      default:
+	cout << "Bad choice. " << endl;
+
+      }
+    // ** Make sure what the functions return will be displayed to the user
+    // ** Make sure a bad case is handled
+    
+  } while (answer != 0);
+    
+  return 0;
+  
+}// end of main
+

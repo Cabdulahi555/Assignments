@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+#include "myMath.h"
+
+int main()
+{
+  cout << pow(2, 4) << endl;
+  
+  return 0;
+}

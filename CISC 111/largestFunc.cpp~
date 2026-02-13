@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+void showProgInfo (); // prototype
+
+int main()
+{
+  showProgInfo (); 
+  
+
+
+
+
+
+  return 0;
+}
+
+void showProgInfo ()
+{
+  cout <<" *****************************************************" << endl;
+    cout <<"This program will ask you to enter 3 numbers and find the largest." << endl;
+    cout <<  " ****************************************************" << endl;
+}

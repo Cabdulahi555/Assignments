@@ -1,0 +1,18 @@
+For HW4:
+
+  Did you read the assignment sheet carefully?
+  
+  Use queue.out to see how a queue should work and plan your test cases.
+
+  Do not change the names of variables and functions as you copy
+  from my notes.
+
+  You can copy from my Word document to emacs easily because
+  right-click is Paste
+
+  g++ queuetest.cpp queue.cpp
+
+  Never compile the header file
+
+ -----
+  Never #include .cpp files

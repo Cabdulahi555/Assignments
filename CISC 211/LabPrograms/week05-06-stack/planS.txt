@@ -1,0 +1,48 @@
+
+  Your name: Cabdulahi Hussein 
+
+  You can use stack.out to see how a stack should work and plan
+  the test cases.
+
+  Type up test cases here to test the stack class
+     and be sure to indicate the expected results.
+  Make sure you test Overflow and Underflow exceptions.
+  Make sure every if-then-else in functions is tested.
+
+  Note that each TASK corresponds to a menu choice.
+  
+     TASK            	   EXPECTED RESULT
+  1. check isEmpty      - should be true at the start
+
+  2. check isFull  	- should be false at the start
+  `   	   		- Test after some deletions
+  			-Check in order 3,4,5,2,1
+
+
+  3. add 10 elements 	- Should display in proper order, LIFO
+
+
+  4. DisplayAll 	- Try when empty
+     			- Test when half full
+			- Test when full
+			
+  5. test Pop		-When empty(underflow)
+     	  		- When full
+			- neither
+
+
+  6. test Push		- Test when empty
+     	 		- Push when full (overflow)
+  
+
+continue to complete the rest...
+
+You will be graded on thoroughness!
+
+Now, run stack.out with these cases and recordhw the results into week6.txt
+
+
+
+
+
+

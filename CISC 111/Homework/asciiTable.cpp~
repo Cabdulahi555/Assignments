@@ -1,0 +1,32 @@
+/**************************************************************************
+Cabdulahi Hussein
+Prof. Slott
+Homework 7 - asciiTable.cpp
+This program will use a for loop to display the characters for the ASCII values 35 through 126, displaying 14 characters on each line
+***************************************************************************/
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+  int c = 0; // c begins at zero
+
+  for (int ascii = 1; ascii <= 126; ascii++) // range for the ascii values
+{
+  cout << (char)ascii << " "; // coutput the ascii characters
+  counter ++;
+  // makes sure we reset the line once we print 14
+  if (c == 14)
+        {
+            cout << endl; // move to the next line
+            c = 0;  // eset the counter
+        }
+ }
+      if (c != 0)
+	{cout << endl;}
+    
+  
+ 
+  return 0;
+}

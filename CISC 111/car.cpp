@@ -1,0 +1,48 @@
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    ifstream fin("car.dat");
+    ofstream fout("carout.dat");
+    
+    fout << left << setw(15) << "Model Name" << setw(15) << "Miles Driven" 
+         << setw(20) << "Gallons of Gas Used" << "MPG" << endl;
+    
+    char model[20];
+    int miles, gallons;
+    double totalMiles = 0, totalGallons = 0;
+    int carCount = 0;
+    
+    fin >> model >> miles >> gallons;
+    
+    while (fin) {
+        carCount++;
+        double mpg = (1.0 * miles) / gallons;
+        
+        fout << left << setw(15) << model 
+             << setw(15) << miles 
+             << setw(20) << gallons 
+             << fixed << setprecision(2) << mpg << endl;
+        
+        totalMiles += miles;
+        totalGallons += gallons;
+        
+        fin >> model >> miles >> gallons;
+    }
+    
+    if (carCount == 0) {
+        fout << "No cars were in the input file." << endl;
+    } else {
+        fout << "\nTotal Miles Driven: " << totalMiles << " miles" << endl;
+        fout << "Total Gallons of Gas Used: " << totalGallons << " gallons" << endl;
+        double avgMPG = totalMiles / totalGallons;
+        fout << "Average MPG: " << fixed << setprecision(2) << avgMPG << " miles per gallon" << endl;
+    }
+    
+    fin.close();
+    fout.close();
+    return 0;
+}

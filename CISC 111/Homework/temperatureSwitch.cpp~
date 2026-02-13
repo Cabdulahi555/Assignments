@@ -1,0 +1,52 @@
+/*************************************************************************
+Cabdulahi Hussein
+Prof. Slott
+Homework 7 - temperatureSwitch.cpp
+This program will ask users to enter a temperature in either F or C and convert the temperature to the other unit.
+**************************************************************************/
+#include <iostream>
+using namespace std;
+
+int main()
+{ //assign variables
+  int F; // inputted fahrenheit
+  int C; // inputted celsius 
+  int choice; // what the user chooses between F or C
+  double c_F; // converted Fahrenheit
+  double c_c; // converted Celcius
+ 
+   //get variables from user
+  
+  cout <<"Which temperature do you have? Enter F for Fahrenheit or C for Celsius?: "
+    cin >> choice;
+
+  // switch
+
+  
+  switch(choice)
+    {
+    case F:
+      cout <<"Enter a temperature in Fahrenheit: " << endl;
+      cin >> F;
+      
+      // calculate conversion
+      c_c = 9/5.0 * C + 32;
+
+      // output
+      cout << F << " Fahrenheit = " << c_c << " Celsius." << endl; 
+
+    default:
+      cout <<"Invalid";
+
+
+
+
+
+
+    }
+  
+
+
+
+  return 0;
+}

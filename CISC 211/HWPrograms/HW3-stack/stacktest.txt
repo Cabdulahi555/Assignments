@@ -1,0 +1,474 @@
+Script started on 2025-10-05 14:02:19-07:00 [TERM="xterm" TTY="/dev/pts/2" COLUMNS="77" LINES="43"]
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/HWPrograms/HW3-stack[?2004h[husse013@empress HW3-stack]$ emacs stacktest.cplscd cs211_ryoshii/CS211Progs/HWPrograms/HW3-stack/[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd cs211_ryoshii/CS211Progs/HWPrograms/HW3-stack/[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cemacs stacktest.cp[Kg++ stack.cpp stacktest.cpp
+[?2004l]0;husse013@empress:~/cs211_ryoshii/CS211Progs/HWPrograms/HW3-stack[?2004h[husse013@empress HW3-stack]$ ./a.out
+[?2004l ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Stack has underflowed
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+3
+Stack is empty 
+[ empty ]
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+4
+Stack has room for elements.
+[ empty ]
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+5
+[ empty ]
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+10
+bad choice
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter integer to be added: 10
+The stack contents from top to bottom: 
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter integer to be added: 20
+The stack contents from top to bottom: 
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter integer to be added: 30
+The stack contents from top to bottom: 
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter integer to be added: 40
+The stack contents from top to bottom: 
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter integer to be added: 50
+The stack contents from top to bottom: 
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter integer to be added: 60
+The stack contents from top to bottom: 
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter integer to be added: 70
+The stack contents from top to bottom: 
+70
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+3
+Stack has elements.
+The stack contents from top to bottom: 
+70
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+4
+Stack has room for elements.
+The stack contents from top to bottom: 
+70
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+5
+The stack contents from top to bottom: 
+70
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter integer to be added: 80
+The stack contents from top to bottom: 
+80
+70
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter integer to be added: 90
+The stack contents from top to bottom: 
+90
+80
+70
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter integer to be added: 100
+The stack contents from top to bottom: 
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+2
+Enter integer to be added: 110
+Stack has overflowed
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+3
+Stack has elements.
+The stack contents from top to bottom: 
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+4
+The stack is full. 
+The stack contents from top to bottom: 
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Element was popped
+The stack contents from top to bottom: 
+90
+80
+70
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Element was popped
+The stack contents from top to bottom: 
+80
+70
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Element was popped
+The stack contents from top to bottom: 
+70
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Element was popped
+The stack contents from top to bottom: 
+60
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Element was popped
+The stack contents from top to bottom: 
+50
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Element was popped
+The stack contents from top to bottom: 
+40
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Element was popped
+The stack contents from top to bottom: 
+30
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Element was popped
+The stack contents from top to bottom: 
+20
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Element was popped
+The stack contents from top to bottom: 
+10
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Element was popped
+[ empty ]
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+1
+Stack has underflowed
+ ---------- MENU --------- 
+1 call pop
+2 call push
+3 call isEmpty
+4 call isFull
+5 call displayAll
+0 to quit
+0
+You have quit. Goodbye. 
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/HWPrograms/HW3-stack[?2004h[husse013@empress HW3-stack]$ exit
+[?2004lexit
+
+Script done on 2025-10-05 14:05:37-07:00 [COMMAND_EXIT_CODE="0"]

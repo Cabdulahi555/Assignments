@@ -1,0 +1,47 @@
+/*************************************************************************
+Cabdulahu Hussein
+Prof Slott
+lab craps.cpp
+This program will emulate a craps game.
+**************************************************************************/
+
+#include <iostream>
+using namespace std;
+
+int rollDice(int rolls);
+
+int main()
+{
+  srand(time(0)); // initialize random number generator;
+  int first_roll;
+  int rolls;
+  rollDice(rolls);
+  
+    if (first_roll == 7 || first_roll == 11)
+      cout <<"==== WIN =====" << endl;
+    else if (first_roll == 2 || first_roll == 3 || first_roll == 12)
+      cout <<"==== LOSE ====" << endl;
+    else{
+      do { rolls = rollDice()
+	  cout << rolls;
+      }while (rolls != first_roll && rolls != 7);
+	if (rolls = 7)
+      cout <<"==== WIN ====" << endl;
+      else if (rolls = first_roll)
+	cout <<"====LOSS====" << endl;
+	
+	}
+    return 0;
+	  
+    
+}
+
+  int rollDice()
+{
+  int roll;
+  roll = (rand() % 6 + 1) + (rand()% 6 + 1);
+
+  return roll;
+
+
+}

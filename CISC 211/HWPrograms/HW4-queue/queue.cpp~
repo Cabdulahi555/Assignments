@@ -1,0 +1,87 @@
+// CS211 HW4 Implementation file for the queue class (Hidden from the client)
+
+// INSTRUCTION: Be sure to use the code from the Notes.
+
+/* ----------------------------------------------
+ Your name: Cabdulahi Hussein
+ Implementation file for the queue class
+ Compiler: g++
+---------------------------------------------------- */
+
+// ** include appropriate files including "queue.h"
+#include <iostream>
+#include "queue.h"
+// ** define all memeber functions matching queue.h
+// and add good comments PURPOSE & PARAMETER
+// constructor
+queue::queue()
+{
+  count = 0;
+  front = 0;
+  rear = -1;
+    
+
+}
+//destructor
+queue::~queue()
+{
+}
+// ** For displayAll, cout Front, Rear and Count just for this HW
+//    so that it is easy for you to see how the queue is wrapping around.
+bool queue::isEmpty()
+{
+  if(count == 0)
+    return true;
+  else
+    return false;
+
+}
+bool queue::isFull()
+{
+  if (count == MAX)
+    return true;
+  else
+    return false;
+}
+void queue::add(el_t elem)
+{
+  if(isFull())
+    throw Overflow();
+  else
+    {rear = (rear + 1) % MAX;
+      el[rear] = elem;
+      count++;
+	}
+}
+void queue::remove(el_t&elem)
+{if (isEmpty())
+    throw Underflow();
+  else
+    {elem = el[front];
+      front = (front + 1) % MAX;
+      count--;
+    }
+}
+void queue::displayAll()
+{
+  cout <<"The contents are: \n"<<endl;
+  cout <<"front = " << front << " " << "count = " << count << " " << "rear = " << rear<<" \n" << endl;
+  int i = front;
+  if (isEmpty()){
+    cout <<"[EMPTY]\n" <<endl;
+    return;
+  }
+  cout <<"[";
+  
+  for(i = front;; i = (i +1)% MAX)
+    {
+      cout <<el[i]<<" ";
+      if (i==rear)
+	break;
+    }
+  cout <<"]"<<endl;
+
+}
+    
+
+

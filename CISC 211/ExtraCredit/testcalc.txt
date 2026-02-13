@@ -1,0 +1,53 @@
+Script started on 2025-10-26 13:30:57-07:00 [TERM="xterm" TTY="/dev/pts/15" COLUMNS="77" LINES="43"]
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/ExtraCredit[?2004h[husse013@empress ExtraCredit]$ exrm stack.clscd EC[2P../a.oug++ calculator.cpp stack.c./a.out[g++ calculator.cpp stack.cpp
+[?2004l]0;husse013@empress:~/cs211_ryoshii/CS211Progs/ExtraCredit[?2004h[husse013@empress ExtraCredit]$ ./a.out
+[?2004ltype a postfix expression: 3+++
+STACK => The stack contents from top to bottom: 
+3
+Underflow. Too few operands.
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/ExtraCredit[?2004h[husse013@empress ExtraCredit]$ ./a.out
+[?2004ltype a postfix expression: 134+
+STACK => The stack contents from top to bottom: 
+1
+STACK => The stack contents from top to bottom: 
+3
+1
+STACK => The stack contents from top to bottom: 
+4
+3
+1
+STACK => The stack contents from top to bottom: 
+7
+1
+Result: 7
+was an incomplete experssion though
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/ExtraCredit[?2004h[husse013@empress ExtraCredit]$ ./a.out
+[?2004ltype a postfix expression: 6412+-*
+STACK => The stack contents from top to bottom: 
+6
+STACK => The stack contents from top to bottom: 
+4
+6
+STACK => The stack contents from top to bottom: 
+1
+4
+6
+STACK => The stack contents from top to bottom: 
+2
+1
+4
+6
+STACK => The stack contents from top to bottom: 
+3
+4
+6
+STACK => The stack contents from top to bottom: 
+1
+6
+STACK => The stack contents from top to bottom: 
+6
+Result: 6
+]0;husse013@empress:~/cs211_ryoshii/CS211Progs/ExtraCredit[?2004h[husse013@empress ExtraCredit]$ exit
+[?2004lexit
+
+Script done on 2025-10-26 13:31:47-07:00 [COMMAND_EXIT_CODE="0"]

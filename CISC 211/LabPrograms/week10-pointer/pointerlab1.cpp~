@@ -1,0 +1,37 @@
+// CS211 Pointer Lab 1 - Yoshii
+
+// INSTRUCTION:
+// Write the program as specified and debug as specified
+// Which lines caused seg faults? Why did this error occur? 
+
+// Your name: Cabdulahi Hussein
+// Your answer: **
+//---------------------------------------
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+  int *P;
+  // cout <<"after first:" << endl;
+  P = new int;
+  // cout<<"after second:"<<endl;
+  *P = 3;
+  // cout <<"after third:" << endl;
+  P = NULL;  // the cell is gone
+  // cout <<"after fourth:"<<endl;
+  cout << *P << endl;
+  cout <<"after fifth: "<<endl;
+  *P = 5;
+
+
+
+
+}//end of main
+

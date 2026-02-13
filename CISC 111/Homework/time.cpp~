@@ -1,0 +1,34 @@
+/*********************************************************************************************************************************************************
+Cabdulahi Hussein
+02/12/2025
+cs111 Homework time.cpp
+
+This program will ask for seconds that have passed since midnight and it will covert it to hours, minutes and seconds in that order.
+***********************************************************************************************************************************************************/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{   int seconds; // seconds time input from user
+    int minutes; // minutes time
+    int hours; // hour time
+    int Seconds; // for the remining seconds to output. Note both Seconds and seconds are different.
+    cout << "Enter the time in seconds: "; // grab input
+    cin >> seconds; // grab input
+    cout << endl; // correct spacing per professor guidlines
+    
+      //Time for  Calculation to make Hour, Minutes and Seconds
+
+    hours = seconds / 3600; // divide by amount of seconds in hour
+    Seconds = seconds % 3600; // find remaining seconds after grouping hour
+    minutes = Seconds / 60; // divide remaining seconds by 60 in order to find minutes
+    Seconds = seconds % 60; // remaining seconds
+    
+    // time to output them in order
+
+    cout << hours << " hours  " <<  minutes <<" minutes  "<< Seconds<< " seconds" <<endl<< endl;
+      
+  return 0;
+  
+}

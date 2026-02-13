@@ -1,0 +1,346 @@
+/***************************************************************
+Cabdulahi Hussein
+Prof. Slott
+Assignment 9 - composer.cpp
+This program will read a file of composers and will display all their information and pieces and output according to 
+user requests and professor guidlines.
+**************************************************************/
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
+#include "input.h"
+using namespace std;
+
+const int MAX_COMP = 10;
+const int PIECES = 5;
+
+struct piece {
+    string title;
+    string year;
+};
+
+struct composer {
+    string fN;
+    string lN;
+    string place;
+    piece pcsAr[PIECES];
+};
+
+// Function declarations
+int showMenu();
+void fillAr(composer ar[], int &num);
+bool readOneComposer(ifstream &fin, composer &c);
+void removeSpaces(string &str);
+void sortPieces(piece pcsAr[], int size);
+void addInOrder(composer ar[], composer c, int &num);
+void displayOneComposer(const composer& c);
+void displayAll(const composer ar[], int num);
+bool findKey(const composer ar[], int num);
+void showComposersChronologically(const composer ar[], int num);
+
+int main() {
+    composer ar[MAX_COMP];
+    int num = 0;
+
+    fillAr(ar, num);
+
+    int choice;
+    do {
+        choice = showMenu();
+        if (choice == 1)
+	  {
+            cout << "Which composer would you like to see?" << endl;
+            for (int i = 0; i < num; i++)
+	      {
+                cout << i + 1 << ": " << ar[i].lN << ", " << ar[i].fN << endl;
+	      }
+            cout << "Enter your choice from 1 to " << num << ": ";
+            int index = getInt(1, num, "Invalid choice. Enter again: ") - 1;
+            cout << "----------------------------------------" << endl;
+            displayOneComposer(ar[index]);
+        }
+        else if (choice == 2)
+	  {
+            displayAll(ar, num);
+	  }
+        else if (choice == 3)
+	  {
+            findKey(ar, num);
+	  }
+        else if (choice == 4)
+	  {
+            showComposersChronologically(ar, num);
+	  }
+    } while (choice != 5);
+
+    return 0;
+}
+
+int showMenu()
+{
+    cout << "++++++++++++++++++++++++++++++++++++++++" << endl;
+    cout << "1: display information on a composer" << endl;
+    cout << "2: display information on all the composers" << endl;
+    cout << "3: find a keyword" << endl;
+    cout << "4: Show composers chronologically" << endl;
+    cout << "5: End" << endl;
+    cout << "Enter your choice: ";
+    return getInt(1, 5, "Invalid choice. Enter again: ");
+}
+
+void fillAr(composer ar[], int &num)
+{
+    composer c;
+    ifstream fin("composer.in");
+    if (!fin)
+      {
+        cout << "composer.in doesn't exist" << endl;
+        exit(1);
+      }
+    while (num < MAX_COMP && readOneComposer(fin, c))
+      {
+        addInOrder(ar, c, num);
+      }
+    fin.close();
+}
+
+
+bool readOneComposer(ifstream& fin, composer& c)
+{
+    // Read first name
+    if (!getline(fin, c.fN, ' ')) return false;
+    removeSpaces(c.fN);
+    
+    // Read last name
+    getline(fin, c.lN, ',');
+    removeSpaces(c.lN);
+    
+    // Read place
+    getline(fin, c.place, ',');
+    removeSpaces(c.place);
+    
+    // Read pieces
+    for (int i = 0; i < PIECES; i++)
+      {
+        // Read title
+        if (i < PIECES-1)
+	  {
+            getline(fin, c.pcsAr[i].title, '(');
+	  }
+	else
+	  {
+            getline(fin, c.pcsAr[i].title, '(');
+	  }
+        removeSpaces(c.pcsAr[i].title);
+        
+        // Read year
+        if (i < PIECES-1)
+	  {
+            getline(fin, c.pcsAr[i].year, ')');
+            fin.ignore(); // Ignore comma
+	  }
+	else
+	  {
+            getline(fin, c.pcsAr[i].year, ')');
+	  }
+        removeSpaces(c.pcsAr[i].year);
+      }
+    
+    // Clean up any remaining newlines
+    string clean;
+    getline(fin, clean);
+    return true;
+}
+
+void sortPieces(piece pcsAr[], int size)
+{
+    for (int i = 0; i < size - 1; i++)
+      {
+        int minIndex = i;
+        for (int j = i + 1; j < size; j++)
+	  {
+            if (pcsAr[j].year < pcsAr[minIndex].year)
+	      {
+                minIndex = j;
+	      }
+	  }
+        if (minIndex != i)
+	  {
+            swap(pcsAr[i], pcsAr[minIndex]);
+	  }
+      }
+}
+
+void removeSpaces(string &str)
+{
+    // Remove leading/trailing spaces
+    size_t start = str.find_first_not_of(" \t\n\r");
+    if (start == string::npos)
+      {
+        str = "";
+        return;
+      }
+    size_t end = str.find_last_not_of(" \t\n\r");
+    str = str.substr(start, end - start + 1);
+    
+    // Remove internal newlines that might be in the middle
+    size_t found;
+    while ((found = str.find('\n')) != string::npos)
+      {
+        str.erase(found, 1);
+      }
+}
+
+void addInOrder(composer ar[], composer c, int &num) {
+    int i = num - 1;
+    while (i >= 0 && (ar[i].lN > c.lN || (ar[i].lN == c.lN && ar[i].fN > c.fN)))
+      {
+        ar[i + 1] = ar[i];
+        i--;
+      }
+    ar[i + 1] = c;
+    num++;
+}
+
+void displayOneComposer(const composer& c)
+{
+    cout << c.fN << " " << c.lN << " from " << c.place << endl;
+    piece sorted[PIECES];
+    for (int i = 0; i < PIECES; i++)
+        sorted[i] = c.pcsAr[i];
+    sortPieces(sorted, PIECES);
+    for (int i = 0; i < PIECES; i++)
+        cout << "\t" << sorted[i].title << " " << sorted[i].year << endl;
+}
+
+void displayAll(const composer ar[], int num)
+{
+    for (int i = 0; i < num; i++)
+      {
+        cout << "----------------------------------------" << endl;
+        displayOneComposer(ar[i]);
+      }
+}
+
+bool findKey(const composer ar[], int num)
+{
+    string key;
+    bool found = false;
+    int index[MAX_COMP];
+    cout << "Please enter a keyword: ";
+    cin.ignore();
+    getline(cin, key);
+    cout << "--------------- RESULT ---------------" << endl;
+
+    for (int i = 0; i < num; i++)
+        index[i] = i;
+
+    // Sort by last name, then first name
+    for (int i = 0; i < num - 1; i++)
+      {
+        int minIdx = i;
+        for (int j = i + 1; j < num; j++)
+	  {
+            if (ar[index[j]].lN < ar[index[minIdx]].lN ||
+                (ar[index[j]].lN == ar[index[minIdx]].lN && ar[index[j]].fN < ar[index[minIdx]].fN))
+                minIdx = j;
+	  }
+        if (minIdx != i)
+	  {
+            int temp = index[i];
+            index[i] = index[minIdx];
+            index[minIdx] = temp;
+	  }
+      }
+
+    for (int k = 0; k < num; k++)
+      {
+        int i = index[k];
+        bool headerPrinted = false;
+        bool piecePrinted = false;
+
+
+	if (ar[i].place.find(key) != string::npos)
+	  {
+	    cout << ar[i].fN << " " << ar[i].lN << " from " << ar[i].place << endl;
+	    headerPrinted = true;
+	    found = true;
+	  }
+	else if (ar[i].fN.find(key) != string::npos || ar[i].lN.find(key) != string::npos)
+	  {
+	    cout << ar[i].fN << " " << ar[i].lN << endl;
+	    headerPrinted = true;
+	    found = true;
+	  }
+
+	
+        for (int j = 0; j < PIECES; j++)
+	  {
+            if (ar[i].pcsAr[j].title.find(key) != string::npos ||
+                ar[i].pcsAr[j].year.find(key) != string::npos)
+	      {
+                if (!headerPrinted)
+		  { //show only name and last name for pieces keyword
+                    cout << ar[i].fN << " " << ar[i].lN << endl;
+                    headerPrinted = true;
+                }
+                cout << "\t" << ar[i].pcsAr[j].title << " " << ar[i].pcsAr[j].year << endl;
+                piecePrinted = true;
+                found = true;
+            }
+        }
+        if (headerPrinted)
+            cout << endl;
+    }
+    if (!found)
+        cout << key << " was not found" << endl;
+
+    return found;
+}
+
+void showComposersChronologically(const composer ar[], int num)
+{
+    int avgYears[MAX_COMP], index[MAX_COMP];
+    for (int i = 0; i < num; i++)
+        index[i] = i;
+
+    // Calculate average years
+    for (int i = 0; i < num; i++)
+      {
+        int sum = 0;
+        for (int j = 0; j < PIECES; j++)
+            sum += stoi(ar[i].pcsAr[j].year);
+        avgYears[i] = (sum / (double)PIECES) + 0.5;
+    }
+
+    // Sort by average year
+    for (int i = 0; i < num - 1; i++)
+      {
+        int minIdx = i;
+        for (int j = i + 1; j < num; j++)
+	  {
+            if (avgYears[index[j]] < avgYears[index[minIdx]])
+                minIdx = j;
+	  }
+        if (minIdx != i)
+	  {
+            int temp = index[i];
+            index[i] = index[minIdx];
+            index[minIdx] = temp;
+	  }
+      }
+
+    cout << left << setw(20) << "First Name" << setw(20) << "Last Name"
+         << right << setw(30) << "Avg Year of Compositions" << endl;
+    cout << "--------------------------------------------------------------------------" << endl;
+
+    for (int i = 0; i < num; i++)
+      {
+        int idx = index[i];
+        cout << left << setw(20) << ar[idx].fN
+             << setw(20) << ar[idx].lN
+             << right << setw(30) << avgYears[idx] << endl;
+      }
+    cout << endl;
+}
