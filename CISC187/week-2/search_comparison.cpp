@@ -7,9 +7,15 @@
 #include <iostream>
 using namespace std;
 
-//IN this function, we will be searching for the elemnent in the given array
-//by going in one by one. We will record the steps taken.
+//Purpose; Performs linear search on an array to find the index of a given key
+/*Parameters;
+      'arr'  - array of integers to search through 
+      'N'      - number of elements in the array
+      'key'    - the value we're searching for
+      '&steps' - reference variable to track number of comparisons made
+*/
 int lin_search( int arr[], int N, int key, int &steps)
+
 {
     steps = 0;
     for (int i = 0; i < N; i++) {
@@ -21,9 +27,12 @@ int lin_search( int arr[], int N, int key, int &steps)
 
 
 }
-//In this function, we will search for the element in the given array but splitting the array,
-// then comparing, then finally sizing down however many times we need. The staps will be 
-//recorded.
+
+//Purpose; Performs binary search on a sorted array to find the index of a given key
+//Parameters; 'arr'  - sorted array of integers to search through
+        //  'N' number of elements in the array
+        //  'key'    - the value we're searching for
+        //  '&steps' - reference variable to track number of comparisons made
 int bin_search(int arr[], int N, int key, int &steps)
 {
     int L = 0;
@@ -55,7 +64,7 @@ int bin_search(int arr[], int N, int key, int &steps)
 int main()
 
 {
-   
+    //limit as by Prof.
     const int N = 100000;
     int arr[N];
     for (int i = 0; i < N; i++)
@@ -64,38 +73,31 @@ int main()
         }
     
         int steps = 0;
-        // Test 1: search for the LAST element (worst-case for linear search)
-    cout << "\n=== Searching for 100000 (worst-case / last element) ===" << endl;
+        // First test; search for the last
+    cout << "\n- Searching for 100000 -" << endl;
+    int index = lin_search(arr, 100000, 100000, steps); //Linear search
+    cout << "Linear search found at index " << index << ". Steps: " << steps << endl;
 
-    int index = lin_search(arr, 100000, 100000, steps);
-    cout << "Linear Search  -> found at index " << index
-         << " | steps: " << steps << endl;
+    index = bin_search(arr, 100000, 100000, steps); //Binary search
+    cout << "Binary Search found at index " << index<< ". Steps: " << steps << endl;
 
-    index = bin_search(arr, 100000, 100000, steps);
-    cout << "Binary Search  -> found at index " << index
-         << " | steps: " << steps << endl;
+    // Second test; search for the first
+    cout << "\n- Searching for 1 -" << endl;
 
-    // Test 2: search for the FIRST element (best-case for linear search)
-    cout << "\n=== Searching for 1 (best-case / first element) ===" << endl;
+    index = lin_search(arr, 100000, 1, steps); //Linear search
+    cout << "Linear Search found at index " << index<< ". Steps: " << steps << endl;
 
-    index = lin_search(arr, 100000, 1, steps);
-    cout << "Linear Search  -> found at index " << index
-         << " | steps: " << steps << endl;
+    index = bin_search(arr, 100000, 1, steps); //Binary search
+    cout << "Binary Search found at index " << index<< ". Steps: " << steps << endl;
 
-    index = bin_search(arr, 100000, 1, steps);
-    cout << "Binary Search  -> found at index " << index
-         << " | steps: " << steps << endl;
+    // Third test; search for a middle
+    cout << "\n- Searching for 50000 (middle element) -" << endl;
 
-    // Test 3: search for a MIDDLE element
-    cout << "\n=== Searching for 50000 (middle element) ===" << endl;
+    index = lin_search(arr, 100000, 50000, steps); //Linear seach
+    cout << "Linear Search found at index " << index<< ". Steps: " << steps << endl;
 
-    index = lin_search(arr, 100000, 50000, steps);
-    cout << "Linear Search  -> found at index " << index
-         << " | steps: " << steps << endl;
-
-    index = bin_search(arr, 100000, 50000, steps);
-    cout << "Binary Search  -> found at index " << index
-         << " | steps: " << steps << endl;
+    index = bin_search(arr, 100000, 50000, steps); //Binary search
+    cout << "Binary Search found at index " << index<< ". Steps: " << steps << endl;
         
         
         
@@ -105,23 +107,21 @@ int main()
 My ran program looks as such :-
 
 
-PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-1> g++ .\search_comparison.cpp
-PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-1> ./a.exe
+PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-2> g++ .\search_comparison.cpp
+PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-2> ./a.exe
 
-=== Searching for 100000 (worst-case / last element) ===
-Linear Search  -> found at index 99999 | steps: 100000
-Binary Search  -> found at index 99999 | steps: 17
+- Searching for 100000 -
+Linear search found at index 99999. Steps: 100000
+Binary Search found at index 99999. Steps: 17
 
-=== Searching for 1 (best-case / first element) ===
-Linear Search  -> found at index 0 | steps: 1
-Binary Search  -> found at index 0 | steps: 16
+- Searching for 1 -
+Linear Search found at index 0. Steps: 1
+Binary Search found at index 0. Steps: 16
 
-=== Searching for 50000 (middle element) ===
-Linear Search  -> found at index 49999 | steps: 50000
-Binary Search  -> found at index 49999 | steps: 1
-PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-1> 
+- Searching for 50000 (middle element) -
+Linear Search found at index 49999. Steps: 50000
+Binary Search found at index 49999. Steps: 1
+PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-2> 
 
 
-LINEAR SEARCHING--------------
-    - In linear searching, the stated steps, which was N
 */
