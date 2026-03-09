@@ -5,9 +5,7 @@ This week because we are coding quite a bit, I'll upload the file and simply add
 -   Final Analysis:-
     The hash table performed well across 4 of the tests. Both random and sequential keys both had a load factor of 0.50
     showing the hash table distributes evenly regardless of input type. The most interesting result however was that the same prefix tests which produced 0 collisions,
-    each key had enough unique characters for the hash function to place them all in seperate buckets. Below attatched will by my output. 
-
--   PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-5> g++ .\hash.cpp
+    each key had enough unique characters for the hash function to place them all in seperate buckets. Attatched on my CPP file I'll paste an output.
     PS C:\Users\abdul\Desktop\VS\Assignments\CISC187\week-5> ./a.exe
     Test 1 -- Insert 100 Random Strings
 
