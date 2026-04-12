@@ -10,6 +10,7 @@ Review [Binary Heaps](https://github.com/d-khan/dslabs/blob/main/binaryheaps/Bin
 1. Draw what the following heap would look like after we insert the value 11 into it:
 <img width="377" alt="image" src="https://user-images.githubusercontent.com/11669149/229943640-2f9f7951-a9c6-4e4a-86f2-ea5dcd4bc64a.png">
   - *see attachtment*
+ 
   - Place new num, 11 right child of 5. -> compare with parent, 11 > 5 so move up       -> compare with new parent, 11 > 9 so move up, -> compare with new parent         11 > 10 so move up.
 
 2. Draw what the previous heap would look like after we delete the root node.
