@@ -49,8 +49,11 @@ function reverse(array) {
   }
   return array;
 }
-	- For this one, we simply reversed an array which was already in place. "temp" is the only extre memory used
-``` 
+	
+```
+```
+- For this one, we simply reversed an array which was already in place. "temp" is the only extre memory used
+```
 4. Following are three different implementations of a function that accepts an array of numbers and returns an array containing those numbers multiplied by 2. For example, if the input is [5, 4, 3, 2, 1], the output will be [10, 8, 6, 4, 2].
 
 ````
