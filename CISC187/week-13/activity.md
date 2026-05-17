@@ -3,9 +3,6 @@
 ## Objective
 How to write a space-efficient code	
 
-## Pre-requisite
-Review [Constraints](https://github.com/d-khan/dslabs/blob/main/space-constraints/Lecture.md) lecture.
-
 ## Tasks
 The following exercises provide you with the opportunity to practice with space constraints.
 
@@ -24,7 +21,7 @@ function wordBuilder(array) {
 		return collection; 
 }
 ```
-
+	- The function created a collection array then polupalted it with a new string for every pair i, j; For the array of N elements there are apporx. N^2 pair which means that the collection of arrays will grow about N^2 elements. The space complexity is O(N^2)
 2. Following is a function that reverses an array. Describe its *space* complexity in terms of Big O:
 
 ```
@@ -36,8 +33,24 @@ function reverse(array) {
 		return newArray;
 }
 ```
-
+	- This one creates a brand new newArray and pushes every element from the original array into it. This ones complexity will be O(N).
+	
 3. Create a new function to reverse an array that takes up just $O(1)$ extra space.
+```
+function reverse(array) {
+  let left = 0;
+  let right = array.length - 1;
+  while (left < right) {
+    let temp = array[left];
+    array[left] = array[right];
+    array[right] = temp;
+    left++;
+    right--;
+  }
+  return array;
+}
+	- For this one, we simply reversed an array which was already in place. "temp" is the only extre memory used
+``` 
 4. Following are three different implementations of a function that accepts an array of numbers and returns an array containing those numbers multiplied by 2. For example, if the input is [5, 4, 3, 2, 1], the output will be [10, 8, 6, 4, 2].
 
 ````
@@ -71,17 +84,7 @@ Fill in the table that follows to describe the efficiency of these three version
 
 | Version    | Time complexity | Space complexity |
 | ---------- | --------------- | ---------------- |
-| Version #1 | ?               | ?                |
-| Version #2 | ?               | ?                |
-| Version #3 | ?               | ?                |
+| Version #1 | o(N)            | O(N)             |
+| Version #2 | O(N             | O(1)             |
+| Version #3 | O(N             | O(N              |
 
-## What/how to submit?  
-- Write your responses in a markdown file along with the code, upload the file to GitHub, and submit the GitHub link in Canvas. Use **appropriate headings to differentiate tasks**.  
-
-## Deadline
-The deadlines are posted on the Syllabus as well as on Canvas.
-
-## Rubric
-- The solution is explained in detail. (10 marks)
-- The solution is submitted, but the explanation is partial. (Marks based on what you have submitted)
-- The solution is not submitted. (0 marks)
